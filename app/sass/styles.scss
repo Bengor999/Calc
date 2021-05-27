@@ -1,0 +1,135 @@
+
+
+
+
+// Глобал
+:root {
+    --color-greyBlue: #34547A;
+}
+body {
+font-family: Arial, sans-serif ;
+}
+.base {
+    margin:0 auto;
+    max-width: 600px;
+    height: 100%;
+    width: 100%;
+    // background-color: #34547A;
+
+}
+.base .text_area {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    height: 80px;
+    background-color: rgb(204, 219, 219);
+}
+.base .text_area input {
+    width: 250px;
+    height: 50px;
+    font-size: 30px;
+    margin: 0 10px;
+    background-color: rgb(204, 219, 219);
+border: 0;
+}
+
+.base .text_area input:focus {
+    outline: none;
+   }
+.base .text_area .left_text_area {
+    text-align: left;
+}
+.base .text_area .right_text_area {
+    text-align: right ;
+}
+.base .text_area .center_text_area {
+    min-width: 40px;
+    min-height: 40px;
+    // background-color: brown;
+    text-align: center ;
+    font-size: 50px;
+}
+.base .text_area div {
+    position: absolute;
+    display: none;
+    top: 10px;
+    width: 200px;
+    min-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    // background-color: darkgoldenrod;
+    border-radius: 9px;
+    padding: 10px;
+
+}
+.base .text_area .error_left_text_area {
+    left: -230px;
+}
+.base .text_area .error_right_text_area {
+    right: -230px;
+}
+
+
+
+.base .text_area .error {
+    background-color: rgb(255, 0, 140);
+    outline-color: rgb(42, 165, 69);
+}
+
+
+.base .number_tabl .number_tabl_top_top,
+.base .number_tabl .number_tabl_center_top,
+.base .number_tabl .number_tabl_center_center,
+.base .number_tabl .number_tabl_center_bottom,
+.base .number_tabl .number_tabl_bottom_bottom
+ {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    height: 100px;
+    // background-color: rgb(42, 165, 69);
+
+}
+.base .number_tabl button {
+    width: 80px;
+    height: 80px;
+    // background-color: rgb(79, 101, 163);
+    font-size: 30px;
+    margin: 10px 10px;
+    border-radius: 9px;
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #fff5bf;/*Button Color*/
+    color: rgb(0, 0, 0);
+    border-bottom: solid 4px #e4daa5;
+}
+.base .number_tabl button:active {/*on Click*/
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*Move down*/
+    border-bottom: none;/*disappears*/
+}
+
+
+.base .number_tabl .number_tabl_center_bottom .number_tabl_zero,
+.base .number_tabl .number_tabl_bottom_bottom .number_tabl_clear {
+    width: 247px;
+}
+
+.base .show_results {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.base .show_results div {
+    min-height: 50px;
+    font-size: 30px;
+    background-color: aquamarine;
+    padding: 10px;
+
+}
+

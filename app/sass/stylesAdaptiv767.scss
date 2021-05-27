@@ -1,0 +1,128 @@
+
+
+
+@media(max-width: 767px){
+    .firstScreen {
+        min-height: 200px;
+    }
+    .menu-burger__header {
+        position: relative; /* задаем относительное позиционирование */
+        width: 40px; /* определяем размеры блока */
+        height: 35px;
+        display: block;
+        margin-right: 20px;
+    }
+    // Рисуем бургер
+    .menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before{
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        background: #515758;
+        margin: 0 auto;
+        z-index: 3;
+    }
+    .menu-burger__header span{
+        top: 16px;
+    }
+    .menu-burger__header:after, .menu-burger__header:before{
+        content: '';
+    }
+    .menu-burger__header:after{
+        bottom: 5px;
+    }
+    .menu-burger__header:before{
+        top: 5px;
+    }
+    .firstScreen_nav_right {
+        display: block;
+        position: absolute;
+        top: 105px;
+        left: 0;
+        width: 100%;
+        left: -200%;
+        transition: all 0.4s ease;
+        background-color: var(--color-greyBlue);
+    }
+    .firstScreen_nav_right.open-menu {
+        left: 0;   
+        margin: 0;
+    }
+
+    .firstScreenNavMenu {
+        display: block;
+            overflow:auto ; /*для того, чтобы меню скроллилось в случае, если оно не влезает на экран*/
+    }
+    .firstScreenNavMenu a {
+        display: block;
+        margin: 40px 0px 40px 33px;
+        font-size: 14px;
+        color: #fff;
+    }
+    // После клика по иконке делаем крестик
+    .menu-burger__header.open-menu span {
+        opacity:0; 
+        transition: 0.5s; 
+    }
+    .menu-burger__header.open-menu:before {
+        transform: rotate(38deg);
+        top: 16px;
+        transition: 0.4s;
+    }
+    .menu-burger__header.open-menu:after {
+        transform: rotate(-38deg);
+        bottom: 16px;
+        transition: 0.4s;
+    }
+//Блокируем прокрутку страницы под меню
+    .fixed-page{
+        overflow: hidden; /*запрещаем прокручивание страницы при открытом меню*/
+    }
+    .firstScreenContent {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    .firstScreenContentRight {
+        align-items: center;
+        max-width: 540px;
+        width: 100%;
+        margin: 20px 20px 20px 20px;
+    }
+    .firstScreenContentRight main {
+        text-align: center;
+        margin: 20px 0;
+    }
+    .video {
+        min-height: 704px;
+    }
+    .videoDescription {
+        min-height: 500px;
+    }
+    .projectsContent a {
+        width: 48vw;
+        height: 48vw;
+    }
+    .projectsContentImg {
+        width: 48vw;
+        height: 48vw;
+    }
+    .formForm {
+        min-height: 450px;
+    }
+    .formFormTop {
+        flex-direction: column;
+    }
+    .formFormTopLeft, .formFormTopRight {
+        margin: 15px 0;
+    }
+    .formForm textarea {
+        padding: 20px ;
+        resize: none;
+        width: 90vw;
+        height: auto;
+    }
+
+
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+ 
+	<meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<title>Document</title>
+ 
+	<!-- Подключаем стили проекта -->
+	<link rel="stylesheet" href="css/app.min.css">
+ 
+</head>
+ 
+<body>
+	<div class="base">
+		<div class="text_area">
+			<input class="left_text_area action" value=""  oninput="InputError(this.value)">
+			<div class="error_left_text_area">sdfsdfdfs</div>
+			<span class="center_text_area"></span>
+			<input class="right_text_area" value="" oninput="InputError(this.value)">
+			<div class="error_right_text_area">sdsagdsfgsdgdf</div>
+		</div>
+		<div class="number_tabl">
+			<div class="number_tabl_top_top">
+				<button id="fgfgfg" class="number_tabl_seven">7</button>
+				<button class="number_tabl_eight">8</button>
+				<button class="number_tabl_nine">9</button>
+				<button class="number_tabl_division">/</button>
+			</div>
+			<div class="number_tabl_center_top">
+				<button class="number_tabl_four">4</button>
+				<button class="number_tabl_five">5</button>
+				<button class="number_tabl_six">6</button>
+				<button class="number_tabl_multiplication">*</button>
+			</div>
+			<div class="number_tabl_center_center">
+				<button class="number_tabl_one">1</button>
+				<button class="number_tabl_two">2</button>
+				<button class="number_tabl_three">3</button>
+				<button class="number_tabl_subtraction">-</button>
+			</div>
+			<div class="number_tabl_center_bottom">
+				<button class="number_tabl_zero">0</button>
+				<button class="number_tabl_equals">=</button>
+				<button class="number_tabl_addition">+</button>
+
+			</div>
+			<div class="number_tabl_bottom_bottom">
+				<button class="number_tabl_clear">Очистить</button>
+				<button class="number_tabl_point">.</button>
+				<button class="number_tabl_K">K</button>
+			</div>
+		</div>
+		<article class="show_results"></article>
+		
+	</div>
+</body>
+	
+	  <!-- Общий js -->
+	  <!-- <script src="JS\app.min.js"></script> -->
+	  <script src="JS\app.js"></script>
+	
+</html>
+	
