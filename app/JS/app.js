@@ -23,7 +23,8 @@ var buttonAddition = document.querySelector('.number_tabl_addition');
 var buttonClear = document.querySelector('.number_tabl_clear');
 var buttonPoint = document.querySelector('.number_tabl_point');
 var buttonK = document.querySelector('.number_tabl_K');
-
+var inputLeft = document.querySelector('.left_text_area');
+var inputRight = document.querySelector('.right_text_area');
 
 //Добавляем слушателей событий на кнопки
 
@@ -45,6 +46,8 @@ buttonAddition.addEventListener('click', onButtonAdditionClick)
 buttonClear.addEventListener('click', onButtonClearClick)
 buttonPoint.addEventListener('click', onButtonPointClick)
 buttonK.addEventListener('click', onButtonKClick)
+inputLeft.addEventListener('click', oninputLeftClick)
+inputRight.addEventListener('click', oninputRightClick)
 
 //функция для нажатия на цифры, точки и буквы
 function onButtonSevenClick() {
@@ -56,6 +59,14 @@ function onButtonEightClick() {
   var inputAction = document.querySelector('.text_area .action');
   inputAction.value = inputAction.value + 8;
   InputError();
+
+
+  inputLeft.oninput = function () {
+    InputError();
+  }
+  inputRight.oninput = function () {
+    InputError();
+  }
 
 }
 function onButtonNineClick() {
@@ -117,6 +128,21 @@ function onButtonKClick() {
 
 }
 
+//Переносим внимание "action" на импуты при клике 
+function oninputLeftClick() {
+  let actualAction = document.querySelector('.text_area .action');
+    //Удаляем Action где бы он ни был
+    actualAction.classList.remove('action');
+    //Добавляем Action в левый импут
+    document.querySelector('.text_area .left_text_area').classList.add('action');
+}
+function oninputRightClick() {
+  let actualAction = document.querySelector('.text_area .action');
+    //Удаляем Action где бы он ни был
+    actualAction.classList.remove('action');
+    //Добавляем Action в правый импут
+    document.querySelector('.text_area .right_text_area').classList.add('action');
+}
 
 
 
@@ -228,7 +254,7 @@ const validTwo = /^[-]|^\d{0,}\.{0,1}\d{0,}$/g;
 function InputError() {
   let number = document.querySelector('.text_area .action').value;
   // console.log(number);
-  if (number.length > 0 &&
+  if (number.length === 0 ||
     ((number.match(validOne))) &&
     ((number.match(validTwo)))
   ) {
@@ -353,7 +379,7 @@ function signArrowResultEquals() {
 function showResults() {
   let showResult = document.querySelector('.base .show_results');
   let divFirst = document.createElement('div');
-  divFirst.innerHTML = arrowResult[arrowResult.length - 1] + " = " + arrowResult[arrowResult.length - 2] + " " + arrowResult[arrowResult.length - 3] + " " + arrowResult[arrowResult.length - 4];
+  divFirst.innerHTML = arrowResult[arrowResult.length - 4] + " " + arrowResult[arrowResult.length - 3] + " " + arrowResult[arrowResult.length - 2] + " = " + arrowResult[arrowResult.length - 1];
   console.log(divFirst);
   showResult.prepend(divFirst);
 
